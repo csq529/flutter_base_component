@@ -8,83 +8,66 @@ class MainPage extends StatelessWidget {
   MainPage({super.key});
 
   final ScrollController _controller = ScrollController();
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Flutter Demo')),
-        body: Container(
-          child: Stack(
-            children: [
-              SingleChildScrollView(
-                controller: _controller,
-                child: Column(
-                  children: List.generate(100, (index) {
-                    return Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      alignment: Alignment.center,
-                      width: double.infinity,
-                      height: 50,
-                      color: Colors.blue,
-                      child: Text(
-                        '我是第${index + 1}个',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                    );
-                  }),
-                ),
+        appBar: AppBar(title: Text('ListView')),
+        // ListView.separated 用法 itemBuilder 构建列表项，separatorBuilder 构建分割线，itemCount 列表项数量
+        body: ListView.separated(
+          itemBuilder: (context, index) {
+            return Container(
+              alignment: Alignment.center,
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Text(
+                '我是第${index + 1}个',
+                style: TextStyle(color: Colors.white),
               ),
-              Positioned(
-                top: 20,
-                right: 20,
-                child: GestureDetector(
-                  onTap: () {
-                    print('去底部');
-                    _controller.animateTo(_controller.position.maxScrollExtent, duration: Duration(seconds: 1), curve: Curves.easeInOut);
-                  },
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: Text(
-                      '去底部',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 20,
-                right: 20,
-                child: GestureDetector(
-                  onTap: () {
-                    _controller.animateTo(0,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut);
-                  },
-                  child: Container(
-                  alignment: Alignment.center,
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Text(
-                    '去顶部',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                ),
-                )
-              ),
-            ],
-          ),
+            );
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return Container(
+              height: 10,
+              color: Colors.amber
+            );
+          },
+          itemCount: 100,
         ),
+
+        // ListView.builder 用法 itemBuilder 构建列表项，itemCount 列表项数量
+        // body: ListView.builder(
+        //   itemCount: 100,
+        //   itemBuilder: (context, index) {
+        //     return Container(
+        //       alignment: Alignment.center,
+        //       width: double.infinity,
+        //       height: 50,
+        //       margin: EdgeInsets.only(bottom: 10),
+        //       decoration: BoxDecoration(color: Colors.blue),
+        //       child: Text(
+        //         '我是第${index + 1}个',
+        //         style: TextStyle(color: Colors.white),
+        //       ),
+        //     );
+        //   },
+        // ),
+
+        // 基础用法
+        // body: ListView(
+        //   children: List.generate(100, (index) {
+        //     return Container(
+        //       alignment: Alignment.center,
+        //       width: double.infinity,
+        //       height: 50,
+        //       margin: EdgeInsets.only(bottom: 10),
+        //       decoration: BoxDecoration(color: Colors.blue),
+        //       child: Text('我是第${index + 1}个', style: TextStyle(color: Colors.white)),
+        //     );
+        //   }),
+        // ),
       ),
     );
   }
