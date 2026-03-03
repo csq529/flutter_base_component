@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_base_component/main.dart';
+import 'package:flutter_base_component/21.GridView.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
