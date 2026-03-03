@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
-  runApp(MainPage());
+  runApp(StatePage());
 }
 
-class MainPage extends StatelessWidget {
-  MainPage({super.key});
+class StatePage extends StatefulWidget {
+  const StatePage({super.key});
 
-  final ScrollController _controller = ScrollController();
+  @override
+  State<StatePage> createState() => _StatePageState();
+}
+
+class _StatePageState extends State<StatePage> {
+  PageController _controller = PageController();
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +23,67 @@ class MainPage extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
-              child: Container(
-                alignment: Alignment.center,
-                width: double.infinity,
-                height: 200,
-                color: Colors.blue,
-                child: Text(
-                  '轮播图',
-                  style: TextStyle(color: Colors.white, fontSize: 30),
-                ),
+              child: Stack(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    height: 200,
+                    color: Colors.blue,
+                    child: PageView.builder(
+                      controller: _controller,
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          color: Colors.blue,
+                          alignment: Alignment.center,
+                          child: Text(
+                            '轮播图${index + 1}',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 10,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 10,
+                        children: List.generate(10, (index) {
+                          return GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                // _controller.jumpToPage(index);
+                                _controller.animateToPage(
+                                  index,
+                                  duration: Duration(milliseconds: 200),
+                                  curve: Curves.bounceIn,
+                                );
+                                _currentIndex = index;
+                                print(_currentIndex);
+                              });
+                            },
+                            child: Container(
+                              width: 10,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: _currentIndex == index
+                                    ? Colors.red
+                                    : Colors.white,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
 
@@ -32,7 +91,7 @@ class MainPage extends StatelessWidget {
 
             SliverPersistentHeader(
               delegate: _StickCategory(), // 自定义组件
-              pinned: true // 吸顶
+              pinned: true, // 吸顶
             ),
 
             SliverToBoxAdapter(child: SizedBox(height: 10)),
