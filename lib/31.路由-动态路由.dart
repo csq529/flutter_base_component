@@ -14,7 +14,7 @@ class MainPage extends StatelessWidget {
       routes: {'/goodsList': (context) => GoodsList()},
       onGenerateRoute: (settings) {
         if (settings.name == '/cartList') {
-
+        
           bool isLogin = false;
 
           if (isLogin) {
