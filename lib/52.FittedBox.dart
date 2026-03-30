@@ -3,6 +3,17 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(home: FittedBoxDemo()));
 }
+/*
+  FittedBox 是一个 Flutter 组件，它用于调整子组件的大小和位置，以适应父组件的约束条件。它通过 BoxFit 枚举来定义如何调整子组件的大小和位置。常见的 BoxFit 枚举值包括：
+- BoxFit.contain：保持子组件的宽高比，尽可能大地适应父组件，但不会裁剪子组件。
+- BoxFit.cover：保持子组件的宽高比，尽可能小地适应父组件，但可能会裁剪子组件。
+- BoxFit.fill：拉伸子组件以完全填充父组件，可能会改变子组件的宽高比。
+- BoxFit.fitHeight：保持子组件的宽高比，调整子组件的高度以适应父组件的高度，宽度会根据高度调整。
+- BoxFit.fitWidth：保持子组件的宽高比，调整子组件的宽度以适应父组件的宽度，高度会根据宽度调整。
+- BoxFit.none：不调整子组件的大小，子组件保持原始大小，可能会超出父组件。   
+
+
+*/
 
 class FittedBoxDemo extends StatefulWidget {
   const FittedBoxDemo({super.key});

@@ -2,7 +2,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(home: CounterPage()));
-
+/*
+  StreamBuilder 是一个 Flutter 组件，用于构建基于异步数据流的用户界面。它监听一个 Stream，并在 Stream 中的数据发生变化时自动重建其子组件。StreamBuilder 的主要属性包括：
+- stream：要监听的 Stream 对象。当 Stream 中的数据发生变化时，StreamBuilder 会自动重建其子组件。
+- builder：一个函数，接受 BuildContext 和 AsyncSnapshot 作为参数。AsyncSnapshot 包含了 Stream 中的数据、错误信息和连接状态等。你可以在 builder 函数中根据这些信息来构建不同的 UI。
+*/
 
 class CounterPage extends StatefulWidget {
   const CounterPage({super.key});

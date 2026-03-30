@@ -4,6 +4,15 @@ void main() {
   runApp(const MaterialApp(home: LayoutBuilderDemo()));
 }
 
+/*
+  LayoutBuilder 是一个 Flutter 组件，它允许你根据父组件提供的约束条件来构建子组件。它的主要作用是帮助你创建响应式布局，适应不同屏幕尺寸和方向。
+  LayoutBuilder 的 builder 属性是一个函数，它接受两个参数：BuildContext 和 BoxConstraints。BoxConstraints 包含了父组件提供的最大宽度、最大高度、最小宽度和最小高度等约束信息。你可以在 builder 函数中根据这些约束条件来决定如何构建子组件，从而实现自适应布局。
+  LayoutBuilder 的常见用法包括：
+- 根据父组件的宽度来调整子组件的布局，例如在窄屏幕上使用垂直布局，在宽屏幕上使用水平布局。
+- 根据父组件的高度来调整子组件的大小，例如在高度较小的情况下显示简化的内容，在高度较大的情况下显示更多的内容。
+- 创建自适应网格布局，根据父组件的宽度动态计算列数.
+
+*/
 class LayoutBuilderDemo extends StatefulWidget {
   const LayoutBuilderDemo({super.key});
 

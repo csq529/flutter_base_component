@@ -4,6 +4,14 @@ import 'package:transparent_image/transparent_image.dart';
 void main() {
   runApp(MaterialApp(home: MyFadeInImage()));
 }
+/*
+  FadeInImage 是一个 Flutter 组件，用于在加载网络图片时显示一个占位图，并在图片加载完成后以淡入动画的方式显示网络图片。FadeInImage 的主要属性包括：
+- placeholder：占位图，可以是一个本地图片资源或一个内存中的图片数据。当网络图片正在加载时，FadeInImage 会显示这个占位图。
+- image：网络图片的 URL。当网络图片加载完成后，FadeInImage 会以淡入动画的方式显示这个图片。
+- fadeInDuration：淡入动画的持续时间，默认为 700 毫秒。你可以通过这个属性来调整动画的速度。
+- fadeInCurve：淡入动画的曲线，默认为 Curves.easeIn。你可以通过这个属性来调整动画的 easing
+
+*/
 
 class MyFadeInImage extends StatefulWidget {
   const MyFadeInImage({super.key});
