@@ -3,7 +3,16 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(home: TransformDemo()));
 }
+/*
+  Transform 是一个 Flutter 组件，用于对其子组件进行变换操作，如旋转、缩放、平移和倾斜等。Transform 的主要属性包括：
+- alignment：定义变换的对齐方式，默认为 Alignment.center。你可以设置为 Alignment.topLeft、Alignment.topRight、Alignment.bottomLeft、Alignment.bottomRight 等来改变变换的基准点。
+- origin：定义变换的原点，默认为 null，表示使用默认的对齐方式作为原点。你可以设置为一个 Offset 来指定自定义的原点。
+- transform：一个 Matrix4 对象，定义了具体的变换操作。你可以使用 Matrix4 的方法来创建旋转、缩放、平移和倾斜等变换。
+- child：要包裹的子组件，Transform 会对这个子组件应用指定的变换操作。
+- transformHitTests：一个布尔值，默认为 true。当设置为 true 时，Transform 会对其子组件的命中测试进行变换，使得用户的交互操作能够正确地响应变换后的组件
 
+
+*/
 class TransformDemo extends StatefulWidget {
   const TransformDemo({super.key});
 

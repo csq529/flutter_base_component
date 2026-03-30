@@ -1,4 +1,5 @@
 import 'dart:ui' as ui;  // 导入 dart:ui 库，用于使用 ImageFilter
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -186,7 +187,7 @@ class _BackdropFilterDemoState extends State<BackdropFilterDemo> {
         // ImageFilter.blur 创建高斯模糊
         // sigmaX: X 轴模糊强度
         // sigmaY: Y 轴模糊强度
-        filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
         child: Container(  // 【必须】设置半透明背景，才能看到背后的模糊效果
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
