@@ -39,10 +39,6 @@ class _BackdropFilterDemoState extends State<BackdropFilterDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BackdropFilter & ImageFilter Demo'),
-        backgroundColor: Colors.transparent,
-      ),
       extendBodyBehindAppBar: true,  // 让内容延伸到状态栏后面
       body: Stack(
         children: [

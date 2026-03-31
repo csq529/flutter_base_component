@@ -37,10 +37,6 @@ class _FittedBoxDemoState extends State<FittedBoxDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FittedBox Demo'),
-        backgroundColor: Colors.blue,
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),

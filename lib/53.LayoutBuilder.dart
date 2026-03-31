@@ -24,10 +24,7 @@ class _LayoutBuilderDemoState extends State<LayoutBuilderDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('LayoutBuilder Demo'),
-        backgroundColor: Colors.blue,
-      ),
+      
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
