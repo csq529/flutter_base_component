@@ -60,6 +60,7 @@ import '58.Stack.dart';
 import '59.Dismissiable.dart';
 import '60.SizeBox.dart';
 import '61.ValueListerableBuilder.dart';
+import '62.AnimatedList.dart';
 
 class Component {
   final String name;
@@ -424,5 +425,10 @@ List<Component> components = [
     name: 'ValueListenableBuilderDemo',
     description: '值监听构建器组件演示',
     builder: () => ValueListenableBuilderDemo(),
+  ),
+  Component(
+    name: 'AnimatedListDemo',
+    description: '动画列表组件演示',
+    builder: () => AnimatedListDemo(),
   ),
 ];
