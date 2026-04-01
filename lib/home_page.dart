@@ -58,6 +58,8 @@ import '56.BackdropFilter.dart' as backdrop_filter;
 import '57.Align.dart' as align;
 import '58.Stack.dart';
 import '59.Dismissiable.dart';
+import '60.SizeBox.dart';
+import '61.ValueListerableBuilder.dart';
 
 class Component {
   final String name;
@@ -129,7 +131,7 @@ List<Component> components = [
   Component(
     name: 'Scaffold',
     description: '页面框架组件',
-    builder: () => scaffold.MyMaterialApp(),
+    builder: () => scaffold.MainPage(),
   ),
   Component(
     name: 'StatelessWidget',
@@ -306,7 +308,7 @@ List<Component> components = [
   Component(
     name: 'FutureBuilder',
     description: '异步数据构建组件',
-    builder: () => future_builder.OpacityWidget(),
+    builder: () => future_builder.FutureBuilderWidget(),
   ),
   Component(
     name: 'FadeTransition',
@@ -412,5 +414,15 @@ List<Component> components = [
     name: 'DismissiableDemo',
     description: '滑动删除组件',
     builder: () => DismissibleDemo(),
+  ),
+  Component(
+    name: 'SizeBoxDemo',
+    description: '尺寸盒子组件演示',
+    builder: () => SizeBoxDemo(),
+  ),
+  Component(
+    name: 'ValueListenableBuilderDemo',
+    description: '值监听构建器组件演示',
+    builder: () => ValueListenableBuilderDemo(),
   ),
 ];
