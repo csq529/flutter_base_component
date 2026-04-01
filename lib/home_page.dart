@@ -64,6 +64,8 @@ import '62.AnimatedList.dart';
 import '63.Flexible.dart';
 import '64.MediaQuery.dart';
 import '65.Spacer.dart';
+import '66.InheritedWidget.dart';
+import '67.AnimatedIcon.dart';
 
 class Component {
   final String name;
@@ -132,6 +134,16 @@ class HomePage extends StatelessWidget {
 }
 
 List<Component> components = [
+  Component(
+    name: 'AnimatedIcon',
+    description: '动画图标组件演示',
+    builder: () => AnimatedIconDemo(),
+  ),
+  Component(
+    name: 'InheritedWidget',
+    description: '状态管理组件演示',
+    builder: () => InheritedWidgetDemo(),
+  ),
   Component(
     name: 'Spacer',
     description: '间隔组件演示',
