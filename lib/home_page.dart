@@ -66,6 +66,11 @@ import '64.MediaQuery.dart';
 import '65.Spacer.dart';
 import '66.InheritedWidget.dart';
 import '67.AnimatedIcon.dart';
+import '68.AspectRatio.dart';
+import '69.LimitedBox.dart';
+import '70.Placeholder.dart';
+import '71.RichText.dart';
+import '72.AnimateSwitcher.dart';
 
 class Component {
   final String name;
@@ -134,6 +139,31 @@ class HomePage extends StatelessWidget {
 }
 
 List<Component> components = [
+  Component(
+    name: 'AnimateSwitcher',
+    description: '动画切换组件',
+    builder: () => AnimatedSwitcherDemo(),
+  ),
+  Component(
+    name: 'RichText',
+    description: '富文本组件',
+    builder: () => RichTextDemo(),
+  ),
+  Component(
+    name: 'Placeholder',
+    description: '占位符组件',
+    builder: () => PlaceholderDemo(),
+  ),
+  Component(
+    name: 'LimitedBox',
+    description: '限制子组件的宽高比',
+    builder: () => LimitedBoxDemo(),
+  ),
+  Component(
+    name: 'AspectRatio',
+    description: '宽高比组件演示',
+    builder: () => AspectRatioDemo(),
+  ),
   Component(
     name: 'AnimatedIcon',
     description: '动画图标组件演示',
