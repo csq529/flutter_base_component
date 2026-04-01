@@ -61,6 +61,7 @@ import '59.Dismissiable.dart';
 import '60.SizeBox.dart';
 import '61.ValueListerableBuilder.dart';
 import '62.AnimatedList.dart';
+import '63.Flexible.dart';
 
 class Component {
   final String name;
@@ -130,296 +131,14 @@ class HomePage extends StatelessWidget {
 
 List<Component> components = [
   Component(
-    name: 'Scaffold',
-    description: '页面框架组件',
-    builder: () => scaffold.MainPage(),
+    name: 'FlexibleDemo',
+    description: '弹性布局组件演示',
+    builder: () => FlexibleDemo(),
   ),
   Component(
-    name: 'StatelessWidget',
-    description: '无状态组件',
-    builder: () => stateless_widget.mainPage(),
-  ),
-  Component(
-    name: 'StatefulWidget',
-    description: '有状态组件',
-    builder: () => stateful_widget.MainPage(),
-  ),
-  Component(
-    name: 'GestureDetector',
-    description: '手势检测组件',
-    builder: () => gesture_detector.mainPage(),
-  ),
-  Component(
-    name: 'TextButton',
-    description: '文本按钮组件',
-    builder: () => text_button.mainPage(),
-  ),
-  Component(
-    name: 'setState',
-    description: '状态更新方法',
-    builder: () => state_set.MainPage(),
-  ),
-  Component(
-    name: 'Container',
-    description: '容器组件',
-    builder: () => container.MainPage(),
-  ),
-  Component(
-    name: 'Center',
-    description: '居中布局组件',
-    builder: () => center.MainPage(),
-  ),
-  Component(
-    name: 'Padding',
-    description: '内边距组件',
-    builder: () => padding.MainPage(),
-  ),
-  Component(
-    name: 'Column',
-    description: '垂直布局组件',
-    builder: () => column.MainPage(),
-  ),
-  Component(name: 'Row', description: '水平布局组件', builder: () => row.MainPage()),
-  Component(
-    name: 'Flex-Horizontal',
-    description: '水平弹性布局',
-    builder: () => flex_horizontal.MainPage(),
-  ),
-  Component(
-    name: 'Flex-Vertical',
-    description: '垂直弹性布局',
-    builder: () => flex_vertical.MainPage(),
-  ),
-  Component(
-    name: 'Flex实例',
-    description: '弹性布局实例',
-    builder: () => flex_example.MainPage(),
-  ),
-  Component(
-    name: 'Wrap',
-    description: '流式布局组件',
-    builder: () => wrap.MainPage(),
-  ),
-  Component(
-    name: 'Stack & Positioned',
-    description: '层叠布局组件',
-    builder: () => stack_positioned.MainPage(),
-  ),
-  Component(name: 'Text', description: '文本组件', builder: () => text.MainPage()),
-  Component(
-    name: 'TextField',
-    description: '输入框组件',
-    builder: () => text_field.MainPage(),
-  ),
-  Component(
-    name: 'ListView',
-    description: '列表组件',
-    builder: () => list_view.MainPage(),
-  ),
-  Component(
-    name: 'GridView',
-    description: '网格布局组件',
-    builder: () => grid_view.MainPage(),
-  ),
-  Component(
-    name: 'CustomScrollView',
-    description: '自定义滚动视图',
-    builder: () => custom_scroll_view.MainPage(),
-  ),
-  Component(
-    name: '无状态组件传值',
-    description: '组件间数据传递',
-    builder: () => stateless_pass_value.MainPage(),
-  ),
-  Component(
-    name: '有状态组件传值',
-    description: '有状态组件数据传递',
-    builder: () => stateful_pass_value.MainPage(),
-  ),
-  Component(
-    name: '传值demo',
-    description: '组件传值示例',
-    builder: () => pass_value_demo.MainPage(),
-  ),
-  Component(
-    name: '传值demo2',
-    description: '组件传值示例2',
-    builder: () => pass_value_demo2.MainPage(),
-  ),
-  Component(
-    name: '网络请求-父传子',
-    description: '网络数据传递示例',
-    builder: () => network_request.MainPage(),
-  ),
-  Component(
-    name: '路由-基础路由',
-    description: '页面跳转基础用法',
-    builder: () => basic_route.MainPage(),
-  ),
-  Component(
-    name: '路由-命名路由',
-    description: '命名路由跳转',
-    builder: () => named_route.MainPage(),
-  ),
-  Component(
-    name: '路由-命名路由传参',
-    description: '命名路由参数传递',
-    builder: () => named_route_params.MainPage(),
-  ),
-  Component(
-    name: '路由-基础路由传参',
-    description: '基础路由参数传递',
-    builder: () => basic_route_params.MainPage(),
-  ),
-  Component(
-    name: '路由-动态路由',
-    description: '动态路由跳转',
-    builder: () => dynamic_route.MainPage(),
-  ),
-  Component(
-    name: '路由-404路由',
-    description: '未找到页面处理',
-    builder: () => route_404.MainPage(),
-  ),
-  Component(
-    name: 'SafeArea',
-    description: '安全区域组件',
-    builder: () => safe_area.SafeAreaWidget(),
-  ),
-  Component(
-    name: 'Expanded',
-    description: '弹性扩展组件',
-    builder: () => expanded.ExpandedWeiget(),
-  ),
-  Component(
-    name: 'Wrap2',
-    description: '流式布局组件2',
-    builder: () => wrap2.WrapWidget(),
-  ),
-  Component(
-    name: 'AnimatedContainer',
-    description: '动画容器组件',
-    builder: () => animated_container.AnimatedContainerWidget(),
-  ),
-  Component(
-    name: 'Opacity',
-    description: '透明度控制组件',
-    builder: () => opacity.OpacityWidget(),
-  ),
-  Component(
-    name: 'FutureBuilder',
-    description: '异步数据构建组件',
-    builder: () => future_builder.FutureBuilderWidget(),
-  ),
-  Component(
-    name: 'FadeTransition',
-    description: '淡入淡出动画',
-    builder: () => fade_transition.MyFadeIn(),
-  ),
-  Component(
-    name: 'FloatingActionButton',
-    description: '悬浮按钮组件',
-    builder: () => floating_action_button.MyFloatingActionButton(),
-  ),
-  Component(
-    name: 'PageView',
-    description: '页面滑动组件',
-    builder: () => page_view.MyPageView(),
-  ),
-  Component(
-    name: 'Table',
-    description: '表格布局组件',
-    builder: () => table.MyTable(),
-  ),
-  Component(
-    name: 'SliverAppBar',
-    description: '可滚动应用栏',
-    builder: () => sliver_app_bar.MySliverAppBar(),
-  ),
-  Component(
-    name: 'SliverList',
-    description: 'Sliver列表组件',
-    builder: () => sliver_list.MySliverList(),
-  ),
-  Component(
-    name: 'SliverGrid',
-    description: 'Sliver网格组件',
-    builder: () => sliver_grid.MySliverGrid(),
-  ),
-  Component(
-    name: 'FadeInImage',
-    description: '图片淡入效果',
-    builder: () => fade_in_image.MyFadeInImage(),
-  ),
-  Component(
-    name: 'StreamBuilder',
-    description: '流数据构建组件',
-    builder: () => stream_builder.CounterPage(),
-  ),
-  Component(
-    name: 'ClipRRect',
-    description: '圆角裁剪组件',
-    builder: () => clip_rrect.MyClipRReact(),
-  ),
-  Component(
-    name: 'Hero',
-    description: '页面转场动画',
-    builder: () => hero.HeroStartPage(),
-  ),
-  Component(
-    name: 'CustomPainter',
-    description: '自定义绘制组件',
-    builder: () => custom_painter.MyCustomPaint(),
-  ),
-  Component(
-    name: 'Tooltip',
-    description: '提示工具组件',
-    builder: () => tooltip.MyTooltip(),
-  ),
-  Component(
-    name: 'FittedBox',
-    description: '适应容器组件',
-    builder: () => fitted_box.FittedBoxDemo(),
-  ),
-  Component(
-    name: 'LayoutBuilder',
-    description: '布局构建器',
-    builder: () => layout_builder.LayoutBuilderDemo(),
-  ),
-  Component(
-    name: 'AbsorbPointer',
-    description: '触摸拦截组件',
-    builder: () => absorb_pointer.MyAbsorbPointer(),
-  ),
-  Component(
-    name: 'Transform',
-    description: '变换组件',
-    builder: () => transform.TransformDemo(),
-  ),
-  Component(
-    name: 'BackdropFilter',
-    description: '背景模糊组件',
-    builder: () => backdrop_filter.BackdropFilterDemo(),
-  ),
-  Component(
-    name: 'Align',
-    description: '对齐组件',
-    builder: () => align.AlignDemo(),
-  ),
-  Component(
-    name: 'Stack & Positioned',
-    description: '堆叠布局组件',
-    builder: () => StackPositionedDemo(),
-  ),
-  Component(
-    name: 'DismissiableDemo',
-    description: '滑动删除组件',
-    builder: () => DismissibleDemo(),
-  ),
-  Component(
-    name: 'SizeBoxDemo',
-    description: '尺寸盒子组件演示',
-    builder: () => SizeBoxDemo(),
+    name: 'AnimatedListDemo',
+    description: '动画列表组件演示',
+    builder: () => AnimatedListDemo(),
   ),
   Component(
     name: 'ValueListenableBuilderDemo',
@@ -427,8 +146,295 @@ List<Component> components = [
     builder: () => ValueListenableBuilderDemo(),
   ),
   Component(
-    name: 'AnimatedListDemo',
-    description: '动画列表组件演示',
-    builder: () => AnimatedListDemo(),
+    name: 'SizeBoxDemo',
+    description: '尺寸盒子组件演示',
+    builder: () => SizeBoxDemo(),
+  ),
+  Component(
+    name: 'DismissiableDemo',
+    description: '滑动删除组件',
+    builder: () => DismissibleDemo(),
+  ),
+  Component(
+    name: 'Stack & Positioned',
+    description: '堆叠布局组件',
+    builder: () => StackPositionedDemo(),
+  ),
+  Component(
+    name: 'Align',
+    description: '对齐组件',
+    builder: () => align.AlignDemo(),
+  ),
+  Component(
+    name: 'BackdropFilter',
+    description: '背景模糊组件',
+    builder: () => backdrop_filter.BackdropFilterDemo(),
+  ),
+  Component(
+    name: 'Transform',
+    description: '变换组件',
+    builder: () => transform.TransformDemo(),
+  ),
+  Component(
+    name: 'AbsorbPointer',
+    description: '触摸拦截组件',
+    builder: () => absorb_pointer.MyAbsorbPointer(),
+  ),
+  Component(
+    name: 'LayoutBuilder',
+    description: '布局构建器',
+    builder: () => layout_builder.LayoutBuilderDemo(),
+  ),
+  Component(
+    name: 'FittedBox',
+    description: '适应容器组件',
+    builder: () => fitted_box.FittedBoxDemo(),
+  ),
+  Component(
+    name: 'Tooltip',
+    description: '提示工具组件',
+    builder: () => tooltip.MyTooltip(),
+  ),
+  Component(
+    name: 'CustomPainter',
+    description: '自定义绘制组件',
+    builder: () => custom_painter.MyCustomPaint(),
+  ),
+  Component(
+    name: 'Hero',
+    description: '页面转场动画',
+    builder: () => hero.HeroStartPage(),
+  ),
+  Component(
+    name: 'ClipRRect',
+    description: '圆角裁剪组件',
+    builder: () => clip_rrect.MyClipRReact(),
+  ),
+  Component(
+    name: 'StreamBuilder',
+    description: '流数据构建组件',
+    builder: () => stream_builder.CounterPage(),
+  ),
+  Component(
+    name: 'FadeInImage',
+    description: '图片淡入效果',
+    builder: () => fade_in_image.MyFadeInImage(),
+  ),
+  Component(
+    name: 'SliverGrid',
+    description: 'Sliver网格组件',
+    builder: () => sliver_grid.MySliverGrid(),
+  ),
+  Component(
+    name: 'SliverList',
+    description: 'Sliver列表组件',
+    builder: () => sliver_list.MySliverList(),
+  ),
+  Component(
+    name: 'SliverAppBar',
+    description: '可滚动应用栏',
+    builder: () => sliver_app_bar.MySliverAppBar(),
+  ),
+  Component(
+    name: 'Table',
+    description: '表格布局组件',
+    builder: () => table.MyTable(),
+  ),
+  Component(
+    name: 'PageView',
+    description: '页面滑动组件',
+    builder: () => page_view.MyPageView(),
+  ),
+  Component(
+    name: 'FloatingActionButton',
+    description: '悬浮按钮组件',
+    builder: () => floating_action_button.MyFloatingActionButton(),
+  ),
+  Component(
+    name: 'FadeTransition',
+    description: '淡入淡出动画',
+    builder: () => fade_transition.MyFadeIn(),
+  ),
+  Component(
+    name: 'FutureBuilder',
+    description: '异步数据构建组件',
+    builder: () => future_builder.FutureBuilderWidget(),
+  ),
+  Component(
+    name: 'Opacity',
+    description: '透明度控制组件',
+    builder: () => opacity.OpacityWidget(),
+  ),
+  Component(
+    name: 'AnimatedContainer',
+    description: '动画容器组件',
+    builder: () => animated_container.AnimatedContainerWidget(),
+  ),
+  Component(
+    name: 'Wrap2',
+    description: '流式布局组件2',
+    builder: () => wrap2.WrapWidget(),
+  ),
+  Component(
+    name: 'Expanded',
+    description: '弹性扩展组件',
+    builder: () => expanded.ExpandedWeiget(),
+  ),
+  Component(
+    name: 'SafeArea',
+    description: '安全区域组件',
+    builder: () => safe_area.SafeAreaWidget(),
+  ),
+  Component(
+    name: '路由-404路由',
+    description: '未找到页面处理',
+    builder: () => route_404.MainPage(),
+  ),
+  Component(
+    name: '路由-动态路由',
+    description: '动态路由跳转',
+    builder: () => dynamic_route.MainPage(),
+  ),
+  Component(
+    name: '路由-基础路由传参',
+    description: '基础路由参数传递',
+    builder: () => basic_route_params.MainPage(),
+  ),
+  Component(
+    name: '路由-命名路由传参',
+    description: '命名路由参数传递',
+    builder: () => named_route_params.MainPage(),
+  ),
+  Component(
+    name: '路由-命名路由',
+    description: '命名路由跳转',
+    builder: () => named_route.MainPage(),
+  ),
+  Component(
+    name: '路由-基础路由',
+    description: '页面跳转基础用法',
+    builder: () => basic_route.MainPage(),
+  ),
+  Component(
+    name: '网络请求-父传子',
+    description: '网络数据传递示例',
+    builder: () => network_request.MainPage(),
+  ),
+  Component(
+    name: '传值demo2',
+    description: '组件传值示例2',
+    builder: () => pass_value_demo2.MainPage(),
+  ),
+  Component(
+    name: '传值demo',
+    description: '组件传值示例',
+    builder: () => pass_value_demo.MainPage(),
+  ),
+  Component(
+    name: '有状态组件传值',
+    description: '有状态组件数据传递',
+    builder: () => stateful_pass_value.MainPage(),
+  ),
+  Component(
+    name: '无状态组件传值',
+    description: '组件间数据传递',
+    builder: () => stateless_pass_value.MainPage(),
+  ),
+  Component(
+    name: 'CustomScrollView',
+    description: '自定义滚动视图',
+    builder: () => custom_scroll_view.MainPage(),
+  ),
+  Component(
+    name: 'GridView',
+    description: '网格布局组件',
+    builder: () => grid_view.MainPage(),
+  ),
+  Component(
+    name: 'ListView',
+    description: '列表组件',
+    builder: () => list_view.MainPage(),
+  ),
+  Component(
+    name: 'TextField',
+    description: '输入框组件',
+    builder: () => text_field.MainPage(),
+  ),
+  Component(name: 'Text', description: '文本组件', builder: () => text.MainPage()),
+  Component(
+    name: 'Stack & Positioned',
+    description: '层叠布局组件',
+    builder: () => stack_positioned.MainPage(),
+  ),
+  Component(
+    name: 'Wrap',
+    description: '流式布局组件',
+    builder: () => wrap.MainPage(),
+  ),
+  Component(
+    name: 'Flex实例',
+    description: '弹性布局实例',
+    builder: () => flex_example.MainPage(),
+  ),
+  Component(
+    name: 'Flex-Vertical',
+    description: '垂直弹性布局',
+    builder: () => flex_vertical.MainPage(),
+  ),
+  Component(
+    name: 'Flex-Horizontal',
+    description: '水平弹性布局',
+    builder: () => flex_horizontal.MainPage(),
+  ),
+  Component(name: 'Row', description: '水平布局组件', builder: () => row.MainPage()),
+  Component(
+    name: 'Column',
+    description: '垂直布局组件',
+    builder: () => column.MainPage(),
+  ),
+  Component(
+    name: 'Padding',
+    description: '内边距组件',
+    builder: () => padding.MainPage(),
+  ),
+  Component(
+    name: 'Center',
+    description: '居中布局组件',
+    builder: () => center.MainPage(),
+  ),
+  Component(
+    name: 'Container',
+    description: '容器组件',
+    builder: () => container.MainPage(),
+  ),
+  Component(
+    name: 'setState',
+    description: '状态更新方法',
+    builder: () => state_set.MainPage(),
+  ),
+  Component(
+    name: 'TextButton',
+    description: '文本按钮组件',
+    builder: () => text_button.mainPage(),
+  ),
+  Component(
+    name: 'GestureDetector',
+    description: '手势检测组件',
+    builder: () => gesture_detector.mainPage(),
+  ),
+  Component(
+    name: 'StatefulWidget',
+    description: '有状态组件',
+    builder: () => stateful_widget.MainPage(),
+  ),
+  Component(
+    name: 'StatelessWidget',
+    description: '无状态组件',
+    builder: () => stateless_widget.mainPage(),
+  ),
+  Component(
+    name: 'Scaffold',
+    description: '页面框架组件',
+    builder: () => scaffold.MainPage(),
   ),
 ];
