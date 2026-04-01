@@ -62,6 +62,8 @@ import '60.SizeBox.dart';
 import '61.ValueListerableBuilder.dart';
 import '62.AnimatedList.dart';
 import '63.Flexible.dart';
+import '64.MediaQuery.dart';
+import '65.Spacer.dart';
 
 class Component {
   final String name;
@@ -130,6 +132,16 @@ class HomePage extends StatelessWidget {
 }
 
 List<Component> components = [
+  Component(
+    name: 'Spacer',
+    description: '间隔组件演示',
+    builder: () => SpacerDemo(),
+  ),
+  Component(
+    name: 'MediaQuery',
+    description: '媒体查询组件演示',
+    builder: () => MediaQueryDemo(),
+  ),
   Component(
     name: 'FlexibleDemo',
     description: '弹性布局组件演示',
